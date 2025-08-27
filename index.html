@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRIDGE Welcome Page</title>
+  <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px 0 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(44, 130, 54, 0.1);
+  }
+
+  /* ✨ Logo Styling */
+  .logo {
+    width: 220px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+    color: #2E7D32;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+
+  /* 🌐 Navbar */
+  nav {
+    text-align: center;
+    margin: 15px 0;
+  }
+  nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #2E7D32;
+  }
+
+  /* ✨ Hero Section */
+  .hero {
+    text-align: center;
+    padding: 60px 20px 100px;
+    background: linear-gradient(to right, #76b852, #8DC26F);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Animated background shapes */
+  .hero::before,
+  .hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    background: white;
+    animation: float 6s ease-in-out infinite;
+  }
+  .hero::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+  .hero::after {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 3s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(20px) translateX(20px); }
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+    animation: fadeInDown 1s ease forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-subtext {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.9);
+    animation: fadeIn 1.5s ease forwards;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn {
+    padding: 12px 28px;
+    background: white;
+    color: #4CAF50;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+  }
+
+  /* ✨ Sections */
+  .sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 250px;
+    flex: 1 1 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .card h3 {
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: #4CAF50;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover h3 {
+    transform: scale(1.1);
+  }
+
+  .card p {
+    font-size: 1em;
+    color: #555;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2em;
+    }
+
+    .card {
+      max-width: 100%;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <header>
+    <img src="bridge.png" alt="BRIDGE Logo" class="logo" />
+    <div class="tagline">Building Relationships, International Dialogue, and Global Exchange</div>
+  </header>
+
+  <!-- 🌐 Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="excursions.html">Excursions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ✨ Hero Section with updated CTA and animated background -->
+  <section class="hero">
+    <h1>Welcome to BRIDGE</h1>
+    <p>Empowering Global Connections in Marrakech</p>
+    <a href="explore.html" class="btn">Join the BRIDGE Experience</a>
+    <p class="hero-subtext">Excursions, local tips & cultural insights await you.</p>
+  </section>
+
+  <!-- ✨ Sections -->
+  <section class="sections">
+    <a href="local-tips.html" class="card">
+      <h3>🌍 Local Tips</h3>
+      <p>Insider advice for navigating Marrakech like a local, from cafés to hidden gems.</p>
+    </a>
+
+    <a href="basic-darija.html" class="card">
+      <h3>🗣️ Basic Darija</h3>
+      <p>Learn greetings, expressions, and simple phrases to connect with locals.</p>
+    </a>
+
+    <a href="excursions.html" class="card">
+      <h3>🏞️ Experience Our Excursions</h3>
+      <p>Join authentic tours: explore valleys, deserts, markets & local culture with us.</p>
+    </a>
+
+    <a href="cultural-etiquette.html" class="card">
+      <h3>🤝 Cultural Etiquette</h3>
+      <p>Do's and don'ts to help you engage respectfully with the community.</p>
+    </a>
+
+    <a href="photo-challenge.html" class="card">
+      <h3>📸 Photo Challenge</h3>
+      <p>Capture moments & win! Share your best BRIDGE memories with the world.</p>
+    </a>
+  </section>
+
+  <footer>
+    © 2025 BRIDGE | Building Global Connections
+  </footer>
+
+</body>
+</html>

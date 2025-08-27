@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horse Riding | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Horse Riding Adventure</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="horse-riding.jpg" alt="Horse Riding" class="main-img" />
+    <p>
+      Experience Morocco’s landscapes the traditional way! Ride majestic horses along sandy beaches, palm groves, and Berber villages with an experienced guide.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="horse1.jpg" alt="Horse Riding by the beach" class="active" />
+      <img src="horse2.jpg" alt="Horse Riding in the countryside" />
+      <img src="horse3.jpg" alt="Traditional Moroccan horse riding" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <section class="booking">
+    <h2>Book This Experience</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello, I’d like to book the Horse Riding experience with BREDGE COMMUNITY!" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+  <!-- 🔗 Navigation -->
+ <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+    function showSlide(i) {
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === i));
+    }
+    next.addEventListener('click', () => { index = (index + 1) % slides.length; showSlide(index); });
+    prev.addEventListener('click', () => { index = (index - 1 + slides.length) % slides.length; showSlide(index); });
+  </script>
+
+</body>
+</html>

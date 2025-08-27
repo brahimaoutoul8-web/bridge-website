@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certified Medina Guide | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Certified Medina Guide</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="medina-tours.jpg" alt="Medina Tour" class="main-img" />
+    <p>
+      Discover Marrakech’s ancient Medina with a certified guide who will reveal its
+      hidden gems, vibrant souks, and rich cultural history. Explore iconic landmarks,
+      artisan workshops, and secret corners that most visitors miss.
+    </p>
+  </section>
+
+  <!-- 📸 Photo Gallery -->
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="medina1.jpg" alt="Souks of Marrakech" class="active" />
+      <img src="medina2.jpg" alt="Spices and markets" />
+      <img src="medina3.jpg" alt="Historic Medina streets" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <!-- 💬 WhatsApp Booking Form -->
+  <section class="booking">
+    <h2>Book This Experience</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello Atlas Vibes, I’d like to book the Certified Medina Guide experience. Can you share details and availability?" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+
+  <!-- 🔗 Navigation -->
+  <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <!-- 🧠 Gallery JS -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === i));
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ouarzazate Tour | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Ouarzazate Day Trip</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="ouarzazte-above.png" alt="Ouarzazate View" class="main-img" />
+    <p>
+      Discover Ouarzazate, the "Hollywood of Africa." Explore the Taourirt Kasbah, visit world-famous movie studios, and enjoy the desert landscapes that have starred in films like Lawrence of Arabia and Gladiator.
+    </p>
+  </section>
+
+  <!-- 📸 Gallery -->
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="Atlas-Studios.jpg" alt="Taourirt Kasbah" class="active" />
+      <img src="Atlas-Studio2.jpg" alt="Atlas Film Studios" />
+      <img src="Gaz_haven.jpg" alt="Desert Surroundings" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <!-- 💬 Booking -->
+  <section class="booking">
+    <h2>Book This Tour</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello, I’d like to book the Ouarzazate tour from BREDGE COMMUNITY!" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+  <!-- 🔗 Navigation -->
+  <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <!-- 🧠 Gallery JS -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === i));
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+  </script>
+
+</body>
+</html>

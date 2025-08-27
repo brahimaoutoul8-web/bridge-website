@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dades Valley Tour | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Dades Valley Tour</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="dades.jpg" alt="Dades Valley" class="main-img" />
+    <p>
+      Explore the stunning Dades Valley, also known as the “Valley of a Thousand Kasbahs.” Marvel at dramatic rock formations, winding roads, and lush oases hidden between the High Atlas and Jbel Saghro mountains.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="dades1.jpg" alt="Dades Canyon" class="active" />
+      <img src="dades2.jpg" alt="Curvy Road" />
+      <img src="dades3.jpg" alt="Kasbahs of Dades" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <section class="booking">
+    <h2>Book This Tour</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello, I’d like to book the Dades Valley tour from BREDGE COMMUNITY!" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+<!-- 🔗 Navigation -->
+ <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+    function showSlide(i) { slides.forEach((s, idx) => s.classList.toggle('active', idx === i)); }
+    next.addEventListener('click', () => { index = (index + 1) % slides.length; showSlide(index); });
+    prev.addEventListener('click', () => { index = (index - 1 + slides.length) % slides.length; showSlide(index); });
+  </script>
+
+</body>
+</html>

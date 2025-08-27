@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BRIDGE - Experience Our Excursions</title>
+ <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  /* ✨ Logo Styling */
+  header .logo {
+    width: 150px;            
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;         
+    display: block;
+    margin: 0 auto;
+  }
+
+  header .logo:hover {
+    transform: scale(1.05);  
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+  }
+
+  /* ✨ Tagline below logo */
+  header .tagline {
+    font-size: 0.9rem;
+    color: #2E7D32;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    color: #4CAF50;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /* ✨ Excursion Card */
+  a.excursion-link {
+    display: block;
+    text-decoration: none !important;
+    color: inherit;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none !important;
+    outline: none !important;
+  }
+
+  a.excursion-link:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  .excursion {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+
+  .excursion:last-child {
+    border-bottom: none;
+  }
+
+  .excursion img {
+    width: 180px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #ddd;
+    transition: transform 0.3s ease;
+  }
+
+  a.excursion-link:hover img {
+    transform: scale(1.05);
+  }
+
+  .excursion-details {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .excursion-details h2 {
+    margin: 0 0 10px;
+    color: #2E7D32;
+    font-size: 1.3rem;
+  }
+
+  .excursion-details p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* 🌐 Navigation Links */
+  nav {
+    max-width: 900px;
+    margin: 30px auto 20px;
+    display: flex;
+    justify-content: center; /* centered nav links */
+    gap: 15px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #2E7D32;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #2E7D32;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #2E7D32;
+    color: white;
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 700px) {
+    main {
+      margin: 15px 10px;
+      padding: 20px 15px;
+    }
+    .excursion {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .excursion img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+
+<header>
+  <img src="bridge.png" alt="BRIDGE Logo" class="logo" />
+  <div class="tagline">Building Relationships, International Dialogue, and Global Exchange</div>
+</header>
+
+
+<main>
+  <h1>🏞️ Experience Our Excursions</h1>
+
+ <a href="essaouira.html" class="excursion-link">
+  <div class="excursion">
+    <img src="essaouira.jpg" alt="Essaouira" />
+    <div class="excursion-details">
+      <h2>Essaouira</h2>
+      <p>Explore the historic seaside town known for its vibrant medina, fresh seafood, and artisan crafts along the Atlantic coast.</p>
+    </div>
+  </div>
+</a>
+
+
+  <a href="ouzoud.html" class="excursion-link">
+  <div class="excursion">
+    <img src="ouzoud.jpg" alt="Ouzoud" />
+    <div class="excursion-details">
+      <h2>Ouzoud</h2>
+      <p>Visit stunning waterfalls surrounded by olive groves and beautiful nature.</p>
+    </div>
+  </div>
+</a>
+  <!-- ✅ INSERT THIS HERE -->
+  <a href="ourika.html" class="excursion-link">
+  <div class="excursion">
+    <img src="ourika.jpg" alt="Ourika valley" />
+    <div class="excursion-details">
+      <h2>Ourika Valley</h2>
+      <p>Enjoy a refreshing escape to the Ourika Valley with river walks, waterfalls, and Berber villages in the Atlas Mountains.</p>
+    </div>
+  </div>
+</a>
+
+  <a href="ait-ben-hadou.html" class="excursion-link">
+  <div class="excursion">
+    <img src="ait-ben-hadou.jpg" alt="Ait Ben Haddou" />
+    <div class="excursion-details">
+      <h2>Ait Ben Haddou</h2>
+      <p>Discover this ancient fortified village and UNESCO World Heritage site, famous for its earthen clay architecture.</p>
+    </div>
+  </div>
+</a>
+
+<a href="ouarzazate.html" class="excursion-link">
+  <div class="excursion">
+    <img src="ouarzazate.jpg" alt="Ouarzazate" />
+    <div class="excursion-details">
+      <h2>Ouarzazate</h2>
+      <p>Explore the gateway to the Sahara Desert and famous film studios, including desert landscapes and kasbahs</p>
+    </div>
+  </div>
+</a>
+
+  <a href="dades.html" class="excursion-link">
+  <div class="excursion">
+    <img src="dades.jpg" alt="dades" />
+    <div class="excursion-details">
+      <h2>dades</h2>
+      <p>Enjoy the breathtaking Dades Gorge with its dramatic cliffs and scenic hiking trails.</p>
+    </div>
+  </div>
+</a>
+
+  <a href="todgha.html" class="excursion-link">
+  <div class="excursion">
+    <img src="todgha.jpg" alt="Gorge Todgha" />
+    <div class="excursion-details">
+      <h2>Gorge Todgha</h2>
+      <p>Experience the spectacular Todgha Gorge, a canyon with towering limestone walls perfect for adventure seekers.</p>
+    </div>
+  </div>
+</a>
+
+<a href="mezouga.html" class="excursion-link"> 
+  <div class="excursion">
+    <img src="merzouga.jpg" alt="Merzouga" />
+    <div class="excursion-details">
+      <h2>Merzouga</h2>
+      <p>Discover the golden dunes of the Sahara Desert with camel treks and traditional Berber experiences.</p>
+    </div>
+  </div>
+</a>
+
+<a href="agafay.html" class="excursion-link">
+  <div class="excursion">
+    <img src="agafay.jpg" alt="Agafay Desert" />
+    <div class="excursion-details">
+      <h2>Agafay</h2>
+      <p>Explore the rocky Agafay Desert with activities like quad biking and magical sunset views.</p>
+    </div>
+  </div>
+</a>
+
+<a href="hot-air-balloon.html" class="excursion-link">
+  <div class="excursion">
+    <img src="montgolfiere.jpg" alt="Hot Air Balloon" />
+    <div class="excursion-details">
+      <h2>Montgolfiere</h2>
+      <p>Soar above Marrakech in a hot air balloon and enjoy breathtaking panoramic views.</p>
+    </div>
+  </div>
+  </a>
+
+  <a href="horse-riding.html" class="excursion-link">
+  <div class="excursion">
+    <img src="horse-riding.jpg" alt="Horse Riding" />
+    <div class="excursion-details">
+      <h2>Horse Riding</h2>
+      <p>Experience scenic horse riding tours through Marrakech’s beautiful landscapes.</p>
+    </div>
+  </div>
+</a> 
+
+<a href="cooking-classes.html" class="excursion-link">
+  <div class="excursion">
+    <img src="cooking-classes.jpg" alt="Cooking Classes" />
+    <div class="excursion-details">
+      <h2>Cooking Classes</h2>
+      <p>Learn to cook traditional Moroccan dishes in a hands-on culinary experience.</p>
+    </div>
+  </div>
+  </a>
+
+  <a href="surfing-agadir.html" class="excursion-link">
+  <div class="excursion">
+    <img src="surfing.jpg" alt="Surfing Sessions" />
+    <div class="excursion-details">
+      <h2>Surfing Sessions</h2>
+      <p>Catch the waves on the Atlantic coast with expert-guided surfing lessons.</p>
+    </div>
+  </div>
+  </a>
+
+  <a href="medina-tours.html" class="excursion-link">
+  <div class="excursion">
+    <img src="medina-tours.jpg" alt="Certified Medina Guide" />
+    <div class="excursion-details">
+      <h2>Certified Medina Guide</h2>
+      <p>Explore the historic medina with certified guides who reveal hidden stories and landmarks.</p>
+    </div>
+  </div>
+</a>
+
+<a href="bicycle tours.html" class="excursion-link">
+  <div class="excursion">
+    <img src="biycicle tours.jpg" alt="Bicycle tours"/>
+    <div class="excursion-details">
+      <h2>Bicycle Tours</h2>
+      <p>Discover Marrakech and its surroundings on fun and eco-friendly bicycle tours.</p>
+    </div>
+  </div>
+</a>
+
+<a href="transport-service.html" class="excursion-link">
+  <div class="excursion">
+    <img src="transport-service.jpg" alt="transport-service"/>
+    <div class="excursion-details">
+      <h2>transport Service</h2>
+      <p>We provide safe, reliable, and air-conditioned transport to all your destinations in Morocco. Whether it’s airport pick-up, city transfers, or custom trips, our professional drivers ensure a smooth and stress-free journey.</p>
+    </div>
+  </div>
+</a>
+
+
+</main>
+
+<nav>
+  <a href="index.html">← Back to Home</a>
+  <a href="cultural-etiquette.html">Cultural Etiquette →</a>
+</nav>
+
+</body>
+</html>

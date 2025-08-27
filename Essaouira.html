@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Essaouira Tour | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Essaouira Day Trip</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="essaouira.jpg" alt="Essaouira Overview" class="main-img" />
+    <p>
+      Discover the magic of Essaouira, the "Windy City of Africa." Wander through its UNESCO-listed medina, watch fishermen bring in the day’s catch at the harbor, and enjoy fresh seafood by the ocean breeze.
+    </p>
+  </section>
+
+  <!-- 📸 Photo Gallery Slider -->
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="essaouira1.jpg" alt="Essaouira Beach" class="active" />
+      <img src="essaouira2.jpg" alt="Essaouira Medina" />
+      <img src="essaouira3.jpg" alt="Essaouira Port" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <!-- 💬 WhatsApp Booking Form -->
+  <section class="booking">
+    <h2>Book This Tour</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello, I’d like to book the Essaouira tour from BREDGE COMMUNITY!" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+
+    <!-- Or via email -->
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+
+  <!-- 🔗 Navigation -->
+<div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <!-- 🧠 Gallery JS -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === i));
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+  </script>
+
+</body>
+</html>

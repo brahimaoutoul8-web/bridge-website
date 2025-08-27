@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agafay Desert Experience | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Agafay Desert Experience</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="agafay.jpg" alt="Agafay Desert Overview" class="main-img" />
+    <p>
+      Escape to the rocky landscapes of the Agafay Desert just outside Marrakech.
+      Enjoy golden light, open horizons, and unforgettable moments — from sunset views
+      to optional activities like camel rides, quad adventures, and stargazing by a cozy campfire.
+    </p>
+  </section>
+
+  <!-- 📸 Photo Gallery Slider -->
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="agafay1.jpg" alt="Agafay Sunset" class="active" />
+      <img src="agafay2.jpg" alt="Camel ride in Agafay" />
+      <img src="agafay3.jpg" alt="Desert camp in Agafay" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <!-- 💬 WhatsApp Booking Form -->
+  <section class="booking">
+    <h2>Book This Experience</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello Atlas Vibes, I’d like to book the Agafay Desert experience. Can you share availability and options?" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+
+  <!-- 🔗 Simple Navigation -->
+  <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <!-- 🧠 Gallery JS -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === i));
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+  </script>
+
+</body>
+</html>

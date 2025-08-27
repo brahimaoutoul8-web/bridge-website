@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ouzoud Waterfalls | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Ouzoud Waterfalls Day Trip</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="ouzoud.jpg" alt="Ouzoud Waterfalls" class="main-img" />
+    <p>
+      Explore the stunning 110-meter-high waterfalls of Ouzoud. Enjoy boat rides, monkey encounters, and panoramic hikes through olive groves and rainbows in Morocco’s most famous waterfall destination.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="ouzoud1.jpg" alt="Waterfall View" class="active" />
+      <img src="ouzoud0.jpg" alt="Monkey in Ouzoud" />
+      <img src="ouzoud3.jpg" alt="Boat Under Waterfall" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <section class="booking">
+    <h2>Book This Tour</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello, I’d like to book the Ouzoud Waterfalls tour from BREDGE COMMUNITY!" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+  <!-- 🔗 Navigation -->
+ <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => slide.classList.toggle('active', idx === i));
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+  </script>
+
+</body>
+</html>

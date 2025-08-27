@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact BRIDGE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0 10px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(44, 130, 54, 0.1);
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #2E7D32;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    nav {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2E7D32;
+    }
+
+    /* ✨ Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 100px;
+      background: linear-gradient(to right, #76b852, #8DC26F);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated background shapes */
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.15;
+      background: white;
+      animation: float 6s ease-in-out infinite;
+    }
+    .hero::before {
+      width: 200px;
+      height: 200px;
+      top: -50px;
+      left: -50px;
+    }
+    .hero::after {
+      width: 300px;
+      height: 300px;
+      bottom: -100px;
+      right: -100px;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(20px) translateX(20px); }
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0 0 10px;
+      animation: fadeInDown 1s ease forwards;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease forwards;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 30px 20px;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .contact-card h3 {
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      color: white;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ebe57;
+      transform: scale(1.05);
+    }
+
+    .instagram-btn {
+      background: #E1306C;
+    }
+
+    .instagram-btn:hover {
+      background: #c1275a;
+      transform: scale(1.05);
+    }
+
+    .email-btn {
+      background: #4CAF50;
+    }
+
+    .email-btn:hover {
+      background: #2E7D32;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .contact-card {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="bridge.png" alt="BRIDGE Logo" class="logo" />
+    <div class="tagline">Building Relationships, International Dialogue, and Global Exchange</div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="excursions.html">Excursions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- ✨ Hero Section with animated background -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out via WhatsApp, Instagram, or Email.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-card">
+      <h3>💬 WhatsApp</h3>
+      <p>Click below to start a conversation with BRIDGE instantly.</p>
+      <a href="https://wa.me/+212697306493?text=Hello%20BRIDGE!" class="contact-btn whatsapp-btn" target="_blank">Message on WhatsApp</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>📸 Instagram</h3>
+      <p>Follow us on Instagram and DM us for questions or collaborations.</p>
+      <a href="https://instagram.com/bre_dge" class="contact-btn instagram-btn" target="_blank">Visit Instagram</a>
+    </div>
+
+    <div class="contact-card">
+      <h3>✉️ Email</h3>
+      <p>Send us an email with your inquiries, suggestions, or feedback.</p>
+      <a href="mailto:bredgecommunity@gmail.com" class="contact-btn email-btn">Send Email</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 BRIDGE | Building Global Connections
+  </footer>
+
+</body>
+</html>
+

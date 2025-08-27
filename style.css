@@ -1,0 +1,180 @@
+/* ✨ General Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1, h2 {
+  color: #006c67;
+  text-align: center;
+}
+
+.main-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.excursion-details {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 🎞️ Gallery Styling */
+.gallery {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider img {
+  width: 100%;
+  display: none;
+  transition: opacity 0.5s;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+.controls button {
+  background: #00a896;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 💬 Booking Form */
+.booking {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.booking-form button {
+  background-color: #007f5f;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.booking-form button:hover {
+  background-color: #005f47;
+}
+
+/* 🗓️ Itinerary Styling (for Merzouga & other multi-day tours) */
+.itinerary {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.itinerary h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d97706; /* warm desert orange */
+}
+
+.day {
+  margin-bottom: 20px;
+}
+
+.day h3 {
+  color: #006c67;
+  margin-bottom: 8px;
+}
+
+/* 🚫 Remove underline + style excursion cards */
+a.excursion-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.excursion-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Make sure children inherit styles */
+a.excursion-link * {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* 🌐 Navigation Links */
+.nav-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-links a {
+  font-size: 18px;       /* Bigger text */
+  font-weight: bold;     /* Make it bold */
+  color: #006c67;        /* Theme color */
+  text-decoration: none; /* No underline */
+  margin: 0 15px;
+  padding: 10px 20px;
+  border: 2px solid #006c67;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  background-color: #006c67;
+  color: white;
+}
+
+/* 🚫 Force remove underline & borders from excursion links */
+a.excursion-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none !important;
+  outline: none !important;
+}
+
+a.excursion-link:link,
+a.excursion-link:visited,
+a.excursion-link:hover,
+a.excursion-link:active {
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+  color: inherit;
+}

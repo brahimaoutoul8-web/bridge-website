@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merzouga 3-Day Desert Tour | Atlas Vibes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Merzouga 3-Day Desert Tour</h1>
+  </header>
+
+  <section class="excursion-details">
+    <img src="merzouga.jpg" alt="Merzouga Desert" class="main-img" />
+    <p>
+      Journey deep into the Sahara on this unforgettable 3-day tour. From the High Atlas Mountains to 
+      the golden dunes of Erg Chebbi, experience kasbahs, oases, canyons, and an overnight stay in a 
+      traditional desert camp under the stars.
+    </p>
+  </section>
+
+  <!-- 🗓️ Itinerary -->
+  <section class="itinerary">
+    <h2>Itinerary</h2>
+    <div class="day">
+      <h3>Day 1: Marrakech → Ait Ben Haddou → Dades Valley</h3>
+      <p>
+        Depart Marrakech across the Tizi n’Tichka pass. Visit the UNESCO World Heritage site of 
+        Ait Ben Haddou, famous for its kasbahs and film studios. Continue through Ouarzazate and 
+        the Rose Valley before overnighting in Dades.
+      </p>
+    </div>
+    <div class="day">
+      <h3>Day 2: Dades Valley → Todgha Gorges → Merzouga Desert</h3>
+      <p>
+        Explore the dramatic Todgha Gorges before heading towards Erfoud and Rissani. Arrive in 
+        Merzouga where camels await to take you across the dunes to your desert camp. Enjoy dinner, 
+        Berber music, and a night under the stars.
+      </p>
+    </div>
+    <div class="day">
+      <h3>Day 3: Merzouga → Marrakech</h3>
+      <p>
+        Wake up early for a magical sunrise over the dunes. After breakfast, return by camel and 
+        begin the journey back to Marrakech with scenic stops along the way.
+      </p>
+    </div>
+  </section>
+
+  <!-- 📸 Gallery -->
+  <section class="gallery">
+    <h2>Photo Highlights</h2>
+    <div class="slider">
+      <img src="merzouga1.jpg" alt="Camel Trek" class="active" />
+      <img src="merzouga2.jpg" alt="Desert Camp" />
+      <img src="merzouga3.jpg" alt="Sunrise in Merzouga" />
+    </div>
+    <div class="controls">
+      <button class="prev">❮</button>
+      <button class="next">❯</button>
+    </div>
+  </section>
+
+  <!-- 💬 Booking -->
+  <section class="booking">
+    <h2>Book This Tour</h2>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" class="booking-form">
+      <input type="hidden" name="phone" value="212697306493" />
+      <input type="hidden" name="text" value="Hello, I’d like to book the Merzouga 3-Day Desert Tour with BREDGE COMMUNITY!" />
+      <button type="submit">Book on WhatsApp</button>
+    </form>
+    <p>or email us at <a href="mailto:atlasvibes.tours@gmail.com">bredgecommunity@gmail.com</a></p>
+  </section>
+  <!-- 🔗 Navigation -->
+  <div class="nav-links">
+  <a href="excursions.html">← Back to Excursions</a>
+  <a href="index.html">Home</a>
+</div>
+
+  <!-- JS for Gallery -->
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+    function showSlide(i) { slides.forEach((s, idx) => s.classList.toggle('active', idx === i)); }
+    next.addEventListener('click', () => { index = (index + 1) % slides.length; showSlide(index); });
+    prev.addEventListener('click', () => { index = (index - 1 + slides.length) % slides.length; showSlide(index); });
+  </script>
+
+</body>
+</html>
